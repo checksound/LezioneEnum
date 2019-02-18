@@ -1,5 +1,7 @@
 package esempio;
 
+import java.util.Scanner;
+
 public class TestStagioniInteractive {
 	
 	/**
@@ -31,9 +33,22 @@ public class TestStagioniInteractive {
 	
 	public static void main(String[] args) {
 		
-		Stagione stagione = Enum.valueOf(Stagione.class, "AUTUNNO");
+		System.out.println("Scegli la stagione:");
 		
-		print(stagione);
+		Scanner scanner = new Scanner(System.in);
+		
+		String nameStagione = scanner.next();
+		
+		nameStagione = nameStagione.toUpperCase();
+		
+		try {
+			Stagione stagione = Enum.valueOf(Stagione.class, nameStagione);
+			System.out.println("HAI SCELTO: " + stagione);
+			print(stagione);
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
+		
 
 	}
 

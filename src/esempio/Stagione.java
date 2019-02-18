@@ -21,5 +21,9 @@ enum Stagione {
 		return temperaturaMedia;
 	}
 	
+	@Override
+	public String toString() {
+		return name() + ", TEMPERATURA MEDIA: " + getTemperaturaMedia();
+	}
 	
 }
