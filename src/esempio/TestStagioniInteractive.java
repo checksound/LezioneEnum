@@ -1,6 +1,6 @@
 package esempio;
 
-public class TestStagioni {
+public class TestStagioniInteractive {
 	
 	/**
 	 * Medodo per stampare i dati sulla stagione.
@@ -31,7 +31,7 @@ public class TestStagioni {
 	
 	public static void main(String[] args) {
 		
-		Stagione stagione = Stagione.INVERNO;
+		Stagione stagione = Enum.valueOf(Stagione.class, "AUTUNNO");
 		
 		print(stagione);
 
