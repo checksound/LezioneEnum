@@ -47,9 +47,10 @@ public class TestStagioniInteractive {
 			print(stagione);
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
+			// e.printStackTrace();
 		}
 		
-
+		System.out.println("SONO QUI");
 	}
 
 }
